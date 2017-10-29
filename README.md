@@ -1,2 +1,0 @@
-# abhedkothadia
-Abhed Kothadia portfolio
