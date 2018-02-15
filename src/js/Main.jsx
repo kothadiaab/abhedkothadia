@@ -8,10 +8,9 @@ import EducationView from './views/Education';
 import BlogsView from './views/Blogs';
 import ContactView from './views/Contact';
 
-class AppRoutes extends Component {
+class Main extends Component {
   render() {
     return(
-      <main>
         <Switch>
           <Route
             exact
@@ -44,9 +43,8 @@ class AppRoutes extends Component {
             component={ContactView}
           />
         </Switch>
-      </main>
     );
   }
 }
 
-export default AppRoutes;
+export default Main;

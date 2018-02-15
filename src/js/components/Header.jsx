@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <h3>Inside header</h3>
+        <h1>Abhed Kothadia</h1>
         <ul>
           <li>
             <Link to="/">Profile</Link>

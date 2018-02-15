@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import AppRoutes from './AppRoutes';
-import Header from './components/common/Header';
-import Footer from './components/common/Footer';
+import Main from './Main';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import '../css/app';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <AppRoutes/>
+        <Main/>
         <Footer/>
       </div>
     );
