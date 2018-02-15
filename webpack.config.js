@@ -12,11 +12,14 @@ module.exports = {
   entry: ['./src/js/index.jsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/build.js'
+    filename: 'js/build.js',
+    publicPath: '/'
   },
   devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: './dist'
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, "dist"),
+    port: 5000
   },
   module: {
     rules: [
@@ -40,6 +43,9 @@ module.exports = {
         })
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.css', '.scss']
   },
   plugins: [
     new UglifyJSPlugin({sourceMap: true}),

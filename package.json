@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "Abhed Kothadia portfolio",
   "main": "index.jsx",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -23,11 +30,6 @@
     "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
-  },
-  "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
