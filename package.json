@@ -4,8 +4,8 @@
   "description": "Abhed Kothadia portfolio",
   "main": "index.jsx",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack -p",
+    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server\"",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -22,10 +22,12 @@
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
+    "favicons-webpack-plugin": "0.0.7",
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
+    "nodemon": "^1.15.0",
     "prop-types": "^15.6.0",
     "sass-loader": "^6.0.6",
     "uglifyjs-webpack-plugin": "^1.1.8",
