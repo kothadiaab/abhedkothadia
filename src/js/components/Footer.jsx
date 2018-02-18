@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Footer extends Component {
   render() {
     return (
-      <div>
+      <div className="footer">
         <h3>Inside footer</h3>
         <ul>
           <li>
