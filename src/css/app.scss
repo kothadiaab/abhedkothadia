@@ -1,5 +1,6 @@
 @import "./utility/variables";
 @import "./utility/fonts";
+@import "~bootstrap/scss/bootstrap";
 @import "./views/views";
 @import "./components/header";
 @import "./components/footer";
@@ -12,9 +13,4 @@ body {
 ul li {
   display: inline;
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: $black;
 }

@@ -16,11 +16,11 @@ module.exports = {
     filename: 'js/build.js',
     publicPath: '/'
   },
-  devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'cheap-module-eval-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     historyApiFallback: true,
     contentBase: path.join(__dirname, "dist"),
-    port: 5000
+    port: 3000
   },
   module: {
     rules: [
@@ -44,14 +44,16 @@ module.exports = {
         })
       },
       {
-        test: /\.(jpg|png|svg)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "images/[hash].[ext]"
-          },
-        },
-      },
+				test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[path][name]-[hash:8].[ext]',
+						},
+					},
+				]
+			},
       { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=public/fonts/[name].[ext]' },
       { test: /\.woff$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=public/fonts/[name].[ext]' },
       { test: /\.woff2$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=public/fonts/[name].[ext]' },
@@ -64,7 +66,7 @@ module.exports = {
   },
   plugins: [
     new UglifyJSPlugin({sourceMap: true}),
-    new FaviconsWebpackPlugin('./favicon.png'),
+    // new FaviconsWebpackPlugin('./favicon.png'),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
