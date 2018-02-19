@@ -1,4 +1,19 @@
 .footer {
-  background-color: #020101;
-  color: #FFF;
+  background-color: $black;
+  color: $white;
+  padding: 1rem 0 0.225rem;
+  text-align: center;
+
+  & ul {
+    padding-left: 0;
+  }
+
+  & li {
+    padding: 0 0.225rem;
+  }
+
+  & li img {
+    cursor: pointer;
+    width: 3rem;
+  }
 }

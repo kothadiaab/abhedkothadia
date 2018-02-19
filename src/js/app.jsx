@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap';
+
 import Main from './Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
