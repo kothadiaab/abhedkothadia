@@ -1,0 +1,17 @@
+.skill-card {
+  border: 1px solid $gray;
+  border-radius: 2px;
+  box-shadow: 5px 5px 10px $gray-100;
+  cursor: pointer;
+  display: table-cell;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.col-md-4, .col-sm-6, .col-xs-12 {
+  display: table;
+  min-height: 150px;
+  padding: 0.5rem;
+}

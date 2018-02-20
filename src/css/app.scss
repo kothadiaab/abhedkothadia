@@ -1,7 +1,9 @@
 @import "./utility/variables";
 @import "./utility/fonts";
+@import "./utility/spacing";
 @import "~bootstrap/scss/bootstrap";
-@import "./views/views";
+@import "./views/profile";
+@import "./views/skills";
 @import "./components/header";
 @import "./components/footer";
 
@@ -13,4 +15,13 @@ body {
 ul li {
   display: inline;
   list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+.container--780 {
+  max-width: 780px;
+  padding: 2rem 1.225rem;
 }
