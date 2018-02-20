@@ -1,19 +1,30 @@
 .footer {
   background-color: $black;
-  color: $white;
-  padding: 1rem 0 0.225rem;
+  color: $gold;
+  min-height: 300px;
+  padding: 2rem 0 0.225rem;
   text-align: center;
+
+  .footer-description {
+    font-size: 10px;
+    margin-top: 10px;
+  }
 
   & ul {
     padding-left: 0;
   }
 
   & li {
-    padding: 0 0.225rem;
+    margin: 0 0.325rem;
   }
 
   & li img {
     cursor: pointer;
     width: 3rem;
+  }
+
+  & a:hover {
+    color: $gold-light;
+    text-decoration: none;
   }
 }

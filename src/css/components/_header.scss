@@ -1,6 +1,6 @@
 .header {
   background-color: $gray;
-  padding: 1rem 0 0.225rem;
+  padding: 2rem 0 0.225rem 1rem;
   text-align: center;
 
   & a {
@@ -15,6 +15,7 @@
     font-weight: normal;
     letter-spacing: 2px;
     margin: 0;
+    text-transform: uppercase;
   }
   & a {
     color: $gold;
@@ -24,6 +25,7 @@
 .header-navigation {
   & ul {
     margin: 1rem 0.5rem;
+    -webkit-padding-start: 20px;
   }
 
   & li:first-child {

@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -16,7 +17,7 @@ module.exports = {
     filename: 'js/build.js',
     publicPath: '/'
   },
-  devtool: 'eval-source-map',
+  devtool: 'cheap-eval-source-map',
   devServer: {
     historyApiFallback: true,
     contentBase: path.join(__dirname, "dist"),
@@ -40,7 +41,13 @@ module.exports = {
       {
         test: /\.scss$/,
         use: extractPlugin.extract({
-          use: ['css-loader', 'sass-loader']
+          fallback: 'style-loader',
+          //resolve-url-loader may be chained before sass-loader if necessary
+          use: [{
+            loader: "css-loader" // translates CSS into CommonJS
+          }, {
+            loader: "sass-loader" // compiles Sass to CSS
+          }]
         })
       },
       {
@@ -69,9 +76,15 @@ module.exports = {
     // new FaviconsWebpackPlugin('./favicon.png'),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
+      favicon: "./images/icons/favicon.png"
     }),
     new CleanWebpackPlugin(['dist']),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      Popper: ['popper.js', 'default']
+    }),
     extractPlugin
   ]
 };
