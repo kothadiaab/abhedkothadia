@@ -1,4 +1,24 @@
-.skill-card {
+.skills {
+  padding-top: 1rem;
+
+  &-column-1 {
+    margin-left: 50px;
+    width: 42%;
+
+    li {
+      list-style:disc;
+    }
+  }
+  &-column-2 {
+    width: 35%;
+
+    li {
+      list-style:disc;
+    }
+  }
+}
+
+.card {
   border: 1px solid $gray;
   border-radius: 2px;
   box-shadow: 5px 5px 10px $gray-100;
@@ -8,10 +28,68 @@
   padding: 10px;
   text-align: center;
   vertical-align: middle;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+
+  div {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .back {
+    display: none;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+  }
+
+  &-rotate {
+    color: $gray-300;
+    font-size: 125%;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    text-align: right;
+  }
+
+  &.flipped{
+    -webkit-transform: rotateY( -180deg );
+    -moz-transform: rotateY( -180deg );
+    -o-transform: rotateY( -180deg );
+    transform: rotateY( -180deg );
+    .front {
+      display: none;
+    }
+    .back {
+      display: block;
+
+      ol {
+        font-size: 1rem;
+        list-style: none;
+        padding: 0;
+        text-align: left;
+      }
+    }
+  }
 }
 
 .col-md-4, .col-sm-6, .col-xs-12 {
   display: table;
-  min-height: 150px;
+  min-height: 200px;
   padding: 0.5rem;
+  position: relative;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
 }

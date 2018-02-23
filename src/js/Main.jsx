@@ -6,7 +6,7 @@ import SkillsView from './views/Skills';
 import WorkView from './views/Work';
 import EducationView from './views/Education';
 import BlogsView from './views/Blogs';
-import ContactView from './views/Contact';
+import GalleryView from './views/Gallery';
 
 class Main extends Component {
   render() {
@@ -40,7 +40,7 @@ class Main extends Component {
           <Route
             exact
             path="/contact"
-            component={ContactView}
+            component={GalleryView}
           />
         </Switch>
     );

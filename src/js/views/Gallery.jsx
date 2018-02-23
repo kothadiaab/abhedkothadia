@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 
 import PrimaryHeader from '../components/PrimaryHeader';
 
-class BlogsView extends Component {
+class GalleryView extends Component {
   render() {
     return (
       <div className="container container--960">
         <PrimaryHeader
-          children="Blogs"
+          children="Gallery"
         />
-        <div className="blogs">
+        <div className="gallery">
           <div className="row">
             Coming soon...
           </div>
@@ -19,4 +19,4 @@ class BlogsView extends Component {
   }
 }
 
-export default BlogsView;
+export default GalleryView;
