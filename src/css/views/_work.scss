@@ -1,0 +1,35 @@
+.work {
+  padding-top: 1rem;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  &-company {
+    font-weight: 900;
+  }
+
+  &-role {
+    color: $gray-200;
+    font-size: 1.225rem;
+    font-style: italic;
+  }
+
+  &-duration {
+    font-size: 0.775rem;
+  }
+
+  &-column-1 {
+    margin-left: 50px;
+    text-align: left;
+    width: 90%;
+
+    ol {
+      padding-left: 45px !important;
+    }
+
+    li {
+      list-style:disc;
+    }
+  }
+}
