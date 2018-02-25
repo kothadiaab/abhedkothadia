@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import PrimaryHeader from '../components/PrimaryHeader';
+import flip from '../../../images/icons/flip-icon.png';
 
 class EducationView extends Component {
 
@@ -36,13 +37,14 @@ class EducationView extends Component {
         />
         <div className="education">
           <div className="row">
-            <div className="col-md-8 col-sm-6 col-xs-12 offset-md-2 offset-sm-3">
+            <div className="col-md-8 col-sm-10 col-xs-12 offset-md-2 offset-sm-1">
               <div className= { this.state.education1Card ? "card flipped" : "card" } onClick={this.handleEducation1Flip}>
                 <div className="front">
                   <p className="education-school">Illinois Institute of Technology</p>
                   <p className="education-degree">Master of Science</p>
                   <p className="education-major">Computer Science</p>
                   <p className="education-duration">Jan 2012 - May 2014</p>
+                  <img src={flip}/>
                 </div>
                 <div className="back">
                   <div className="row">
@@ -59,18 +61,18 @@ class EducationView extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-md-8 col-sm-6 col-xs-12 offset-md-2 offset-sm-3">
+            <div className="col-md-8 col-sm-10 col-xs-12 offset-md-2 offset-sm-1">
               <div className= { this.state.education2Card ? "card flipped" : "card" } onClick={this.handleEducation2Flip}>
                 <div className="front">
                   <p className="education-school">University of Pune</p>
                   <p className="education-degree">Bachelor of Engineering</p>
                   <p className="education-major">Information Technolgy</p>
                   <p className="education-duration">June 2006 - July 2010</p>
+                  <img src={flip}/>
                 </div>
                 <div className="back">
                   <div className="row">
@@ -87,7 +89,6 @@ class EducationView extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
           </div>

@@ -6,10 +6,11 @@ class ProfileView extends Component {
   render() {
     return (
       <div className="container container--960">
-        <PrimaryHeader
-          children="Hello There"
-        />
-        <div className="padding-top-single-space">
+        <div className="profile">
+          <PrimaryHeader
+            children="Hello There"
+          />
+          <p>Hi, I'm Abhed.</p>
           <p>
             <span className="profile-question"># Who am I professionally?</span> I’m a <b>Front end developer</b>,
             who strongly believe in writing code that is clean, readable, modular and reusable, always keeping in
@@ -23,11 +24,15 @@ class ProfileView extends Component {
             and find it necessary to understand every aspect of something in order to make proper,
             informed decisions.
           </p>
-          <p>
-            <span className="profile-question"># Who am I outside of work?</span> Frequent flyer,
-            music lover, die hard soccer fan (#ViscaBarca), tennis admirer(#RF) and
-            a passionate cricket supporter.
-          </p>
+
+          <span className="profile-question"># Who am I outside of work?</span>
+          <ol list-style="none">
+            <li>Frequent flyer</li>
+            <li>Music lover</li>
+            <li>Soccer fan (#ViscaBarca)</li>
+            <li>Tennis admirer(#RF)</li>
+            <li>Passionate Cricket supporter</li>
+          </ol>
         </div>
       </div>
     );

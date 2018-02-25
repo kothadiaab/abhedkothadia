@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import PrimaryHeader from '../components/PrimaryHeader';
+import flip from '../../../images/icons/flip-icon.png';
 
 class SkillsView extends Component {
   constructor(props) {
@@ -69,7 +70,10 @@ class SkillsView extends Component {
           <div className="row">
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className= { this.state.librariesCard ? "card flipped" : "card" } onClick={this.handleLibrariesFlip}>
-                <div className="front">Javascript Libraries</div>
+                <div className="front">
+                  Javascript Libraries
+                  <img src={flip}/>
+                </div>
                 <div className="back">
                   <div className="row">
                     <div className="skills-column-1">
@@ -89,34 +93,41 @@ class SkillsView extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className= { this.state.languagesCard ? "card flipped" : "card" } onClick={this.handleLanguagesFlip}>
-                <div className="front">Languages</div>
+                <div className="front">
+                  Languages
+                  <img src={flip}/>
+                </div>
                 <div className="back">
                   <div className="row">
                     <div className="skills-column-1">
                       <ol>
                         <li>HTML5</li>
                         <li>XML</li>
-                      </ol>
-                    </div>
-                    <div className="skills-column-2">
-                      <ol>
                         <li>CSS3</li>
                         <li>SCSS</li>
                       </ol>
                     </div>
+                    <div className="skills-column-2">
+                      <ol>
+                        <li>Javascript</li>
+                        <li>.net core</li>
+                        <li>Java</li>
+                      </ol>
+                    </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className= { this.state.frameworksCard ? "card flipped" : "card" } onClick={this.handleFrameworksFlip}>
-                <div className="front">Frameworks</div>
+                <div className="front">
+                  Frameworks
+                  <img src={flip}/>
+                </div>
                 <div className="back">
                   <div className="row">
                     <div className="skills-column-1">
@@ -134,33 +145,40 @@ class SkillsView extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className= { this.state.BundlersCard ? "card flipped" : "card" } onClick={this.handleBundlersFlip}>
-                <div className="front">Bundlers</div>
+                <div className="front">
+                  Bundlers & Source Control
+                  <img src={flip}/>
+                </div>
                 <div className="back">
                   <div className="row">
                     <div className="skills-column-1">
                       <ol>
                         <li>Gulp</li>
                         <li>Rollup</li>
+                        <li>Webpack</li>
                       </ol>
                     </div>
                     <div className="skills-column-2">
                       <ol>
-                        <li>Webpack</li>
+                        <li>Github</li>
+                        <li>SVN</li>
+                        <li>Gitlabs</li>
                       </ol>
                     </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className= { this.state.cloudServicesCard ? "card flipped" : "card" } onClick={this.handleCloudServicesFlip}>
-                <div className="front">Cloud Services</div>
+                <div className="front">
+                  Cloud Services
+                  <img src={flip}/>
+                </div>
                 <div className="back">
                   <div className="row">
                     <div className="skills-column-1">
@@ -178,26 +196,25 @@ class SkillsView extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className= { this.state.otherToolsCard ? "card flipped" : "card" } onClick={this.handleOtherToolsFlip}>
-                <div className="front">Other Tools</div>
+                <div className="front">
+                  Other Tools
+                  <img src={flip}/>
+                </div>
                 <div className="back">
                   <div className="row">
                     <div className="skills-column-1">
                       <ol>
-                        <li>Github</li>
                         <li>Invision</li>
                         <li>JIRA</li>
                         <li>ALM</li>
-
                       </ol>
                     </div>
                     <div className="skills-column-2">
                       <ol>
-                        <li>SVN</li>
                         <li>Zeplin</li>
                         <li>Rally</li>
                         <li>Clicktale</li>
@@ -205,7 +222,6 @@ class SkillsView extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="card-rotate">...</div>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 .work {
-  padding-top: 1rem;
+  margin-top: 0.5rem; 
 
   p {
     margin-bottom: 0.5rem;
@@ -19,13 +19,13 @@
     font-size: 0.775rem;
   }
 
-  &-column-1 {
-    margin-left: 50px;
+  &-details {
+    padding: 0 3rem;
     text-align: left;
-    width: 90%;
 
     ol {
-      padding-left: 45px !important;
+      padding-left: 30px !important;
+      font-size: 0.75rem !important;
     }
 
     li {
