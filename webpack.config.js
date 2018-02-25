@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebPackPlugin = require('Html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -17,7 +16,7 @@ module.exports = {
     filename: 'js/build.js',
     publicPath: '/'
   },
-  devtool: 'cheap-eval-source-map',
+  devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
     contentBase: path.join(__dirname, "dist"),
@@ -72,8 +71,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.css', '.scss']
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
     new UglifyJSPlugin({sourceMap: true}),
-    // new FaviconsWebpackPlugin('./favicon.png'),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html",

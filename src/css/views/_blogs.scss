@@ -1,0 +1,62 @@
+.blogs {
+  margin-top: 0.5rem;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  &-description {
+    color: $gray-200;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  &-timestamp {
+    color: $gray-400;
+    font-size: 0.775rem;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &-action {
+    background-color: $gold-200;
+    font-size: 1rem;
+    margin: 0 -11px;
+    padding: 0px 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    span {
+      font-size: 2rem;
+      vertical-align: sub;
+    }
+  }
+
+  .card {
+    display: block;
+    min-height: 300px;
+
+    .front {
+      padding: 20px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .card {
+      display: block;
+      min-height: 400px;
+
+      .front {
+        padding: 10px;
+      }
+    }
+  }
+
+}

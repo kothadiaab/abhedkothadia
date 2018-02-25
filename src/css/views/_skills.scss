@@ -1,5 +1,5 @@
 .skills {
-  padding-top: 1rem;
+  margin-top: 0.5rem;
 
   &-column-1 {
     margin-left: 50px;
@@ -23,8 +23,11 @@
   border-radius: 2px;
   box-shadow: 5px 5px 10px $gray-100;
   cursor: pointer;
-  display: table-cell;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 1.5rem;
+  min-height: 225px;
   padding: 10px;
   text-align: center;
   vertical-align: middle;
@@ -53,13 +56,11 @@
     transform: rotateY( 180deg );
   }
 
-  &-rotate {
-    color: $gray-300;
-    font-size: 125%;
-    position: absolute;
-    bottom: 0;
-    right: 5%;
-    text-align: right;
+  img {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 35px;
   }
 
   &.flipped{
@@ -84,8 +85,6 @@
 }
 
 .col-md-4, .col-sm-6, .col-xs-12 {
-  display: table;
-  min-height: 200px;
   padding: 0.5rem;
   position: relative;
   -webkit-perspective: 800px;

@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 
 import PrimaryHeader from '../components/PrimaryHeader';
 
-class GalleryView extends Component {
+class ReactSetupView extends Component {
   render() {
     return (
       <div className="container container--960">
-        <div className="gallery">
-          <PrimaryHeader
-            children="Gallery"
-          />
+        <PrimaryHeader
+          children="React project setup"
+        />
+        <div className="blogs">
           <div className="row">
-            Coming soon...
+            Welcome to react_setup blog by Abhed Kothadia
           </div>
         </div>
       </div>
@@ -19,4 +19,4 @@ class GalleryView extends Component {
   }
 }
 
-export default GalleryView;
+export default ReactSetupView;

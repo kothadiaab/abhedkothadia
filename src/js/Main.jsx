@@ -7,10 +7,12 @@ import WorkView from './views/Work';
 import EducationView from './views/Education';
 import BlogsView from './views/Blogs';
 import GalleryView from './views/Gallery';
+import ReactSetupView from './views/blogs-react_setup';
 
 class Main extends Component {
   render() {
     return(
+      <main>
         <Switch>
           <Route
             exact
@@ -42,7 +44,13 @@ class Main extends Component {
             path="/contact"
             component={GalleryView}
           />
+          <Route
+            exact
+            path="/blogs-react_setup"
+            component={ReactSetupView}
+          />
         </Switch>
+      </main>
     );
   }
 }
