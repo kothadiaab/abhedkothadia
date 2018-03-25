@@ -1,3 +1,4 @@
+export profile from './profile.png';
 export facebook from './icons/footer_facebook.png';
 export linkedin from './icons/footer_linkedin.png';
 export instagram from './icons/footer_instagram.png';
