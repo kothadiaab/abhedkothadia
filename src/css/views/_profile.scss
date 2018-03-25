@@ -3,6 +3,11 @@
     list-style: none;
     margin-left: -40px;
   }
+
+  img {
+    width: 180px;
+    border-radius: 100%;
+  }
 }
 .primary-header {
   font-family: "Open Sans";
@@ -40,5 +45,12 @@
     min-height: 60px;
     text-align: center;
     text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .profile-content {
+    padding: 0 3rem;
   }
 }
